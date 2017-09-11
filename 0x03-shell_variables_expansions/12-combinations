@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e {a..z}{a..z}"\n" | grep -v oo
+echo {a..z}{a..z} | xargs -n 1 echo | grep -v oo
