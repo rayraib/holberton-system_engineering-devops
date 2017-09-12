@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s\n" $(cat Acrostic | cut -c 1 | tr -d '\n')
+printf "%s\n" $(cat | cut -c 1 | tr -d '\n')
