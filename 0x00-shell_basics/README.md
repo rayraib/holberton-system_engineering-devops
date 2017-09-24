@@ -1,19 +1,40 @@
-File 0: lists the path to current directory
-File 1: lists all the file in current directory
-File 2: moves to user's home directory
-file 3: displays all the files and directories in long format
-file 4: displays files starting with . hidden files
-file 5: displays the user and group in number instead of text
-file 6: creating directory
-file 7: moving betty ot another directory holberton inside tmp
-file 8: remove the file betty from holberton in tmp dir
-file 9:remove holberton from inside tmp
-file 10: go back to the previous directort
-file 11: list files and folders in current, parent and /boot dir
-file 12: finds the file type of a new file iamafile
-file 13: creat a new symbolic link
-file 14: copy all html files to a destination that does'nt have it or has older version
-file 15: move all files beginning with uppercase
-file 16:  remove all files with ~ at the end
-file 17: create a directory with subdirectories
-file 18: listing all files and directories separated by comma
+#0-current_working_directory
+Script to list the path to current directory
+### 1-listit
+Script to list all the file in current directory
+### 2-bring_me_home
+Script to move to user's home directory
+### 3-listfiles
+Script to display all the files and directories in long format
+### 4-listmorefiles
+Scirpt to display files starting with . hidden files
+### 5-listfilesdigitonly
+Script to display the user and group in number instead of text
+### 6-firstdirectory
+Script to create directory
+### 7-movethatfile
+Scirpt to move betty ot another directory holberton inside tmp
+### 8-firstdelete
+Script to remove the file betty from holberton in tmp dir
+### 9-firstdirdeletion
+Script to remove holberton from inside tmp
+### 10-back
+Script to go back to the previous directort
+### 11-lists
+Script to list files and folders in current, parent and /boot dir
+### 12-file_type
+Script to find the file type of a new file iamafile
+### 13-symbolic_link
+Script to create a new symbolic link
+### 14-copy_html
+Script to copy all html files to a destination that does'nt have it or has older version
+### 15-lets_move
+Scritp to move all files beginning with uppercase
+### 16-clean_emacs
+Script to remove all files with ~ at the end
+### 17-tree
+Script create a directory with subdirectories
+### 18-commas
+Script to list all files and directories separated by comma
+### holberton.mgc
+Project to create a magic file that can be used with the command file to detect holberton data files.
