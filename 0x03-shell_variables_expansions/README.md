@@ -1,5 +1,5 @@
 #0x03-shell_variables_expansions 
-
+------------------------------------------------------------------------------------
 Project to learn about shell initialization files, `/etc/profile` and `/etc/profile.d`, what the `~/.bashrc` file is, local and global variable, create, update and delete shell variables, special parameters, what expansion is and how to use them, performing arithmetic operation, create, list, and disable alias.
 -------------------------------------------------------------------- 
 ### 0-alias
