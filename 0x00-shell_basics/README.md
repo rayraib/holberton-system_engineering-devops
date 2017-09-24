@@ -1,4 +1,7 @@
-#0-current_working_directory
+# 0X00-shell_basics
+Project to learn about what "The Shell" is, how to navigate within the she, manipulate files, work with commands, read man pages, keyboard shortcuts for Bash.
+
+### 0-current_working_directory
 Script to list the path to current directory
 ### 1-listit
 Script to list all the file in current directory
