@@ -6,7 +6,7 @@ do
 	if [ $COUNT -eq 3 ]
 	then
 		echo "bad luck"
-	elif [ $COUNT -eq 7 ]	
+	elif [ $COUNT -eq 7 ]
 	then
 		echo "good luck"
 	else

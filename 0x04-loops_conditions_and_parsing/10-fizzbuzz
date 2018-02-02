@@ -2,7 +2,7 @@
 # This script display number from 1 to 100, and does FIZZBUZZ
 for (( i=1; i<=100; i++ ));
 do
-	if (( i % 15 == 0 )) 
+	if (( i % 15 == 0 ))
 	then
 		echo "FizzBuzz"
 	elif (( i % 5 == 0 ))

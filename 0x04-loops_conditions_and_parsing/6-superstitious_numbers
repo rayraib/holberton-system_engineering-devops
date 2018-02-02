@@ -4,7 +4,7 @@ COUNT=1
 while [ $COUNT -le 20 ]
 do
 	if [ $COUNT -eq 4 ]
-	then 
+	then
 		echo "bad luck from China"
 	elif [ $COUNT -eq 9 ]
 	then

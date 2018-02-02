@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
 for (( i=0; i<11; i++ )); do
-	echo "Holberton School" 
+	echo "Holberton School"
 done
