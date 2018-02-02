@@ -1,4 +1,4 @@
-#1/usr/bin/env bash
+#!/usr/bin/env bash
 # This script displays "Holberton School" ten times,for 9th iteration, say Hi
 count=0
 while (( count < 10 ));
