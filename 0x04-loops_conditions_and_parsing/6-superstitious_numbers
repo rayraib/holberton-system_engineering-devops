@@ -3,7 +3,8 @@
 # displays "bad luck from China" for the 4th loop iteration
 # displays "bad luc from Japan" for the 9th loop iteration
 # displays "bad luck from Italy" for the 17th loop iteration
-for (( COUNT=1; COUNT<=20; COUNT++ ));
+COUNT=1
+while [ $COUNT -le 20 ]
 do
 	if [ $COUNT -eq 4 ]
 	then 
@@ -17,4 +18,5 @@ do
 	else
 		echo "$COUNT"
 	fi
+	(( COUNT++ ))
 done
