@@ -4,7 +4,7 @@ count=0
 while (( count < 10 ));
 do
 	echo "Holberton School"
-	if (( count == 8 ))
+	if [ $count -eq 8 ]
 	then
 		echo "Hi"
 	fi
