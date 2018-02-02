@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script displays number from 1 to 20 and
+# displays "bad luck from China" for the 4th loop iteration
+# displays "bad luc from Japan" for the 9th loop iteration
+# displays "bad luck from Italy" for the 17th loop iteration
+for (( COUNT=1; COUNT<=20; COUNT++ ));
+do
+	if [ $COUNT -eq 4 ]
+	then 
+		echo "bad luck from China"
+	elif [ $COUNT -eq 9 ]
+	then
+		echo "bad luck from Japan"
+	elif [ $COUNT -eq 17 ]
+	then
+		echo "bad luck from Italy"
+	else
+		echo "$COUNT"
+	fi
+done
