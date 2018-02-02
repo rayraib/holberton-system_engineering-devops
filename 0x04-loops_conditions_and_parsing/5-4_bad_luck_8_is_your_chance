@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This script loops from 1 to 10 and displays:
+# "bad luck" for 4th iteration
+# "good luck" for the 8th loop iteration
+# "Holberton School" for the other iteration
+COUNT=0
+while [ $COUNT -lt 10 ] 
+do
+	if [ $COUNT -eq 3 ]
+	then
+		echo "bad luck"
+	elif [ $COUNT -eq 7 ]	
+	then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+	(( COUNT++ ))
+done
