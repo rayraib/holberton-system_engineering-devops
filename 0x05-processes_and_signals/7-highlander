@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script displays "To.. beyond" indefinitely and "I...le!" when SEGTERM
+while (( 1 ));
+do
+	trap 'echo "I am invincible!!!"' SIGTERM
+	echo "To infinity and beyond"
+	sleep 2;
+done
