@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Bash script to Configure your Nginx server so that /redirect_me is redirecting to another page.
-code="location ~ /redirect_me {\n\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4:\n}"
+code="location ~ /redirect_me {\n\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}"
 sed -i "28i $code" /etc/nginx/sites-available/default 
