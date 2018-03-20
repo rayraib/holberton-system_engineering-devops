@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Script that enables curling port 80 to return a page that contains Hello Holberton
+
 sudo service apache2 start
