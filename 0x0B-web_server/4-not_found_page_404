@@ -4,8 +4,8 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y install nginx
 sudo service nginx start
-code="\\terror_page 404 /custom_404.html;\n location = /custom_404.html {\n\t root /usr/share/nginx/html;\n internal;\n\t}"
 sudo touch /usr/share/nginx/html/custom_404.html
 echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
-sed -i "29i $code" /etc/nginx/sites-availalbe/default
+code="\\t error_page 404 /custom_404.html;\n\t location = /custom_404.html {\n\t\t root /usr/share/nginx/html;\n internal;\n\t}"
+sed -i "29i $code" /etc/nginx/sites-available/default
 sudo service nginx restart
