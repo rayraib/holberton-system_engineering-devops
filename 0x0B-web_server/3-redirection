@@ -3,5 +3,5 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 echo "Holberton School" > /usr/share/nginx/html/index.html
-code="location ~ /redirect_me {\n\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}"
+code="\\tlocation ~ /redirect_me {\n\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
 sed -i "28i $code" /etc/nginx/sites-available/default 
