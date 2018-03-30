@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# making a short/sweet fix for nginx not listening to port 80 
+sudo service nginx start
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo service nginx restart
