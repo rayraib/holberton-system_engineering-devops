@@ -2,5 +2,5 @@
 # configures a server to the requirements:
 #+ listening on port 80
 sudo service nginx start
-sudo sed =i -e 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo sed -ie 's/8080/80/g' /etc/nginx/sites-enabled/default
 sudo service nginx restart
