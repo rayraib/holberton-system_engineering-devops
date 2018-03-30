@@ -10,8 +10,6 @@ BACKEND='backend_node
         \n\tserver 223-web-01 52.23.184.231:80 check
         \n\tserver 223-web-02 54.173.122.229:80 check
         \n\tserver 223-lb-01 107.22.129.214:80 check'
-sudo apt-get update
-sudo apt-get install -y haproxy
 sudo add-apt-repository ppa:vbernat/haproxy-1.5
 sudo apt-get update
 sudo apt-get -y dist-upgrade
