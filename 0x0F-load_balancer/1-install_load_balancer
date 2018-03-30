@@ -11,5 +11,5 @@ sudo cp /etc/haproxy/haproxy.cfg cp_haproxy.cfg
 sudo sed -i -e '$a\listen appname 0.0.0.0:80' /etc/haproxy/haproxy.cfg
 sudo sed -i -e '$a\\tmode http \n\tbalance roundrobin' /etc/haproxy/haproxy.cfg
 sudo sed -i -e '$a\\tserver 223-web-01 52.23.184.231:80 check' /etc/haproxy/haproxy.cfg
-sudo sed -e -e '$a\\tserver 223-web-02 54.173.122.229:80 check' /etc/haproxy/haproxy.cfg
+sudo sed -i -e '$a\\tserver 223-web-02 54.173.122.229:80 check' /etc/haproxy/haproxy.cfg
 sudo service haproxy start
