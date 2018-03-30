@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# configure a new nginx server
+sudo apt-get update
+sudo apt-get install -y nginx
+service nginx start
+sudo sed "/index index.html index.htm;/a add_header X-served-By $HOSTNAME" /etc/nging/sites-enabled/default
+service nginx restart
