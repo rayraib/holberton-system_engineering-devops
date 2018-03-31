@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 # install HAProxy
-sudo add-apt-repository ppa:vbernat/haproxy-1.5 -y
+sudo add-apt-repository ppa:vbernat/haproxy-1.7 -y
 sudo apt-get -y update
 sudo apt-get -y dist-upgrade
 sudo apt-get install -y haproxy
+sudo apt-get install policycoreutils -y
+setsebool -P haproxy_connect_any=1
 echo ENABLED=1 | sudo tee /etc/default/haproxy
 sudo cp /etc/haproxy/haproxy.cfg cp_haproxy.cfg
 sudo sed -i -e '$a\listen appname 0.0.0.0:80' /etc/haproxy/haproxy.cfg
 sudo sed -i -e '$a\\tmode http \n\tbalance roundrobin' /etc/haproxy/haproxy.cfg
 sudo sed -i -e '$a\\tserver 223-web-01 52.23.184.231:80 check' /etc/haproxy/haproxy.cfg
 sudo sed -i -e '$a\\tserver 223-web-02 54.173.122.229:80 check' /etc/haproxy/haproxy.cfg
-sudo service haproxy start
+sudo service haproxy restart
