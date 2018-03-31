@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # configure a new nginx server
-sudo apt-get update
 sudo apt-get install nginx -y
-sudo sed -i "21i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+sed -i "21i\add_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
 sudo service nginx restart
