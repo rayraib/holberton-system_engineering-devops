@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# return domain and subdomain records 
+#subdomain=("www", "lb-01", "web-01", "web-02")
+subdomains=("www" "lb-01" "web-01" "web-02")
+
+if [ "$#" == 1 ]; then
+    for subdomain in "${subdomains[@]}"; do 
+        dig "$subdomain.$1" | grep -A1 'ANSWER SECTION:' | grep -v 'ANSWER' | awk -v awksub="$subdomain" '{printf "The subdomain %s is a A record and points to %s\n", awksub, $5}'
+    done
+else
+    subdomain="$2"
+    dig "$1" | grep -A1 'ANSWER SECTION:' | grep -v 'ANSWER' | awk -v awksub="$subdomain" '{printf "The subdomain %s is a A record and points to %s\n", awksub, $5}'
+fi
