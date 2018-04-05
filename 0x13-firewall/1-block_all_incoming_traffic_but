@@ -5,3 +5,4 @@ sudo ufw allow SSH
 sudo ufw allow http 
 sudo ufw allow 443
 sudo ufw enable
+sudo service ufw restart
