@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script that makes Nginx is running as the nginx user.
+sed -i s/"# user www-data;"/"user nginx;" /etc/nginx/nginx.conf
