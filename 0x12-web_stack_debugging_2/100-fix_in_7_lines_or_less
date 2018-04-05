@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Script that makes Nginx is running as the nginx user.
+sudo adduser nginx root
+chmod g+r /etc/nginx/nginx.conf
+sed -i s/80/8080/g /etc/nginx/sites-enabled/default
+pkill -f apache2
+su - nginx -c "service nginx restart"
