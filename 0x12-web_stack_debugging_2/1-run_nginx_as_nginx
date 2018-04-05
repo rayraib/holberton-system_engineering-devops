@@ -4,5 +4,4 @@ sudo adduser nginx root
 chmod g+r /etc/nginx/nginx.conf
 sed -i s/80/8080/g /etc/nginx/sites-enabled/default
 pkill -f apache2
-sudo su nginx
-service nginx restart
+su - nginx -c "service nginx restart"
