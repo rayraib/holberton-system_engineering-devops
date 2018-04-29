@@ -20,12 +20,12 @@ def get_content(emp_id):
     todo_json = todo_r.json()
     user_json = user_r.json()
 
-    user_name = user_json[0]['name']
+    user_name = user_json[0].get('name')
     total_tasks = len(todo_json)
     comp_tasks = []
 
     for task in todo_json:
-        if task['completed'] is True:
+        if task.get('completed') is True:
             comp_tasks.append(task)
 
     format_output(user_name, total_tasks, comp_tasks)
@@ -36,7 +36,7 @@ def format_output(user_name, total_tasks, comp_tasks):
     print('Employee {} is done with tasks({}/{}):'
           .format(user_name, len(comp_tasks), total_tasks))
     for task in comp_tasks:
-        print("\t {}".format(task['title']))
+        print("\t {}".format(task.get('title')))
 
 
 if __name__ == "__main__":
