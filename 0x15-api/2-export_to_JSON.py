@@ -22,8 +22,8 @@ def get_content(emp_id):
     user_r = requests.get(user_url)
 
     user_json = user_r.json()
-    user_name = user_json[0]['name']
-    user_id = user_json[0]['id']
+    user_name = user_json[0].get('name')
+    user_id = user_json[0].get('id')
 
 # create required variables
     todo_data = todo_r.json()
@@ -33,8 +33,8 @@ def get_content(emp_id):
 
 # create the data to write to JSON file in desired format
     for item in todo_data:
-        f_dict["task"] = item["title"]
-        f_dict["completed"] = item["completed"]
+        f_dict["task"] = item.get("title")
+        f_dict["completed"] = item.get("completed")
         f_dict["username"] = user_name
         format_.append(f_dict)
     final_format = {user_id: format_}

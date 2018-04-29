@@ -23,8 +23,8 @@ def get_content():
 
 # for each user in users list get their todo list
     for user in users:
-        u_id = user['id']
-        u_name = user['name']
+        u_id = user.get('id')
+        u_name = user.get('name')
         todos_url = "https://jsonplaceholder.typicode.com/todos?userId={}"\
                     .format(u_id)
         todo_r = requests.get(todos_url)
@@ -36,8 +36,8 @@ def get_content():
 
 # create the data to write to JSON file in desired format
         for item in todo_data:
-            f_dict["task"] = item["title"]
-            f_dict["completed"] = item["completed"]
+            f_dict["task"] = item.get("title")
+            f_dict["completed"] = item.get("completed")
             f_dict["username"] = u_name
             format_.append(f_dict)
         final_format[u_id] = format_
