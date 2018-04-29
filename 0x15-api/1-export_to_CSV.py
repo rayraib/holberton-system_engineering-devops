@@ -21,7 +21,7 @@ def get_content(emp_id):
 
     user_json = user_r.json()
 
-    user_name = user_json[0]['name']
+    user_name = user_json[0].get('name')
     todo_data = todo_r.json()
     file_name = "{}.csv".format(emp_id)
 
@@ -29,8 +29,8 @@ def get_content(emp_id):
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
 
         for user in todo_data:
-            writer.writerow([user['userId'], user_name,
-                            user['completed'], user['title']])
+            writer.writerow([user.get('userId'), user_name,
+                            user.get('completed'), user.get('title')])
 
 
 if __name__ == "__main__":
