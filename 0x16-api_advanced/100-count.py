@@ -28,7 +28,7 @@ def count_words(subreddit, word_list, word_dict={}, after="", first_call=True):
     first_call = False
     # if the current page it last page
     if after is None:
-        print_final(word_dict, 0, word_list, len(word_list))
+        print_final(word_dict, 0, word_list, len(word_list), 0)
         return
 
     # construct new url with the after value to get next page
@@ -36,11 +36,8 @@ def count_words(subreddit, word_list, word_dict={}, after="", first_call=True):
           .format((subreddit), after)
     word_dict = count_words(subreddit, word_list,
                             word_dict, after, first_call)
-    # if page contained no posts
-    if len(word_dict == 0):
-        print('\n')
-        return
-    print_final(word_dict, 0, word_list, len(word_list))
+
+    print_final(word_dict, 0, word_list, len(word_list), 0)
     return
 
 
@@ -85,13 +82,16 @@ def check_word(title_list, word_list,
     return (word_dict)
 
 
-def print_final(word_dict, count, word_list, length):
+def print_final(word_dict, count, word_list, length, x):
     if count < length:
         key = word_list[0]
         if key in word_dict.keys():
             value = word_dict[key]
             if value != 0:
+                x = 1
                 print("{}: {}".format(key, value))
         word_list.remove(key)
         count += 1
-        print_final(word_dict, count, word_list, length)
+        print_final(word_dict, count, word_list, length, x)
+        if x == 0:
+            print('\n')
