@@ -12,9 +12,9 @@ def top_ten(subreddit):
 
     r = requests.get(url, headers=headers, allow_redirects=False)
     if r.status_code != 200:
-        return 0
-    content = r.json()
+        return None
 
+    content = r.json()
     data = content['data']
 
     children = data['children']
