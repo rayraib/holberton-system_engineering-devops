@@ -1,6 +1,6 @@
 ### System engineering & DevOps - Bash
 
-#### This repository contains Holberton School's projects on shell basics, shell permissions, I/0 redirections and filters, init files, and variables and expansions.
+#### This repository contains Holberton School's projects for the System Engineering and DevOps track.
 -------------------
 Topics explored, practiced and implemented on during the SysAdmin track:
 
